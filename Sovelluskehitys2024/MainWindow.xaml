@@ -20,12 +20,12 @@
         </Menu>
         <TabControl Margin="0,20,0,0">
             <TabItem Header="Tuotelista">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <DataGrid x:Name="tuotelista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Lisää/poista tuote">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Label Content="Tuotteen nimi" HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top" Width="86"/>
                     <Label Content="Tuotteen hinta" HorizontalAlignment="Left" Margin="50,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.581,0.368"/>
                     <TextBox x:Name="tuotenimi" HorizontalAlignment="Left" Margin="200,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="144" Height="26" TextChanged="TextBox_TextChanged"/>
@@ -36,7 +36,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Asiakkaat">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <DataGrid x:Name="asiakaslista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120"/>
                     <Label Content="Nimi" HorizontalAlignment="Left" Margin="472,32,0,0" VerticalAlignment="Top"/>
                     <Label Content="Puhelin" HorizontalAlignment="Left" Margin="472,92,0,0" VerticalAlignment="Top"/>
@@ -48,7 +48,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Tilaukset">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <DataGrid x:Name="tilauslista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="id" Binding="{Binding Path='id'}" IsReadOnly="True"/>
@@ -68,6 +68,11 @@
                     <Button Content="Lisää tilaus" HorizontalAlignment="Left" Margin="513,147,0,0" VerticalAlignment="Top" Height="28" Width="189" Click="Button_Click_4"/>
                     <ComboBox x:Name="asiakaslista_cb" HorizontalAlignment="Left" Margin="582,34,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox x:Name="tuotelista_cb_2" HorizontalAlignment="Left" Margin="582,94,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Toimitetut">
+                <Grid>
+                    <DataGrid x:Name="toimitetutlista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120"/>
                 </Grid>
             </TabItem>
         </TabControl>

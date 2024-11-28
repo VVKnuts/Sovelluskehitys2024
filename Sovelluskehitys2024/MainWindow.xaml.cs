@@ -213,7 +213,6 @@ namespace Sovelluskehitys2024
             yhteys.Open();
 
             string sql = "UPDATE tilaukset SET toimitettu=1 WHERE id='" + tilaus_id + "';";
-
             SqlCommand komento = new SqlCommand(sql, yhteys);
             komento.ExecuteNonQuery();
 

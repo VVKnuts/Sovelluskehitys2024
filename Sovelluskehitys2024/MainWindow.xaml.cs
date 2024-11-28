@@ -171,6 +171,21 @@ namespace Sovelluskehitys2024
             PaivitaComboBox(tuotelista_cb, tuotelista_cb_2);
         }
 
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            SqlConnection yhteys = new SqlConnection(polku);
+            yhteys.Open();
+
+            string id = tuotelista_cb.SelectedValue.ToString();
+            string kysely = "INSERT INTO tuotteet (maara) VALUES ('"+ tuotemaara.Text +"') WHERE id='"+ id + "';"; //WHERE id='" + id + "';";
+            SqlCommand komento = new SqlCommand(kysely, yhteys);
+            komento.ExecuteNonQuery();
+            yhteys.Close();
+
+            PaivitaDataGrid("SELECT * FROM tuotteet", "tuotteet", tuotelista);
+            PaivitaComboBox(tuotelista_cb, tuotelista_cb_2);
+        }
+
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             SqlConnection yhteys = new SqlConnection(polku);

@@ -177,7 +177,7 @@ namespace Sovelluskehitys2024
             yhteys.Open();
 
             string id = tuotelista_cb.SelectedValue.ToString();
-            string kysely = "INSERT INTO tuotteet (maara) VALUES ('"+ tuotemaara.Text +"') WHERE id='"+ id + "';"; //WHERE id='" + id + "';";
+            string kysely = "UPDATE tuotteet SET maara = '"+ tuotemaara.Text +"' WHERE id='"+ id + "';"; //WHERE id='" + id + "';";
             SqlCommand komento = new SqlCommand(kysely, yhteys);
             komento.ExecuteNonQuery();
             yhteys.Close();

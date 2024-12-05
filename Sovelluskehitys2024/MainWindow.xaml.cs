@@ -33,8 +33,8 @@ namespace Sovelluskehitys2024
                 PaivitaDataGrid("SELECT * FROM tuotteet", "tuotteet", tuotelista);
                 PaivitaDataGrid("SELECT * FROM asiakkaat", "asiakkaat", asiakaslista);
                 PaivitaDataGrid("SELECT * FROM myyjat", "myyjat", myyjalista);
-                PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyja FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
-                PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyja FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='1'", "tilaukset", toimitetutlista);
+                PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyjä FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
+                PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyjä FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='1'", "tilaukset", toimitetutlista);
                 PaivitaComboBox(tuotelista_cb, tuotelista_cb_2);
                 PaivitaAsiakasComboBox();
                 PaivitaMyyjaComboBox();
@@ -259,7 +259,7 @@ namespace Sovelluskehitys2024
 
             yhteys.Close();
 
-            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyja FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
+            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyjä FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
         }
 
         private void toimita_tilaus_Click(object sender, RoutedEventArgs e)
@@ -276,8 +276,8 @@ namespace Sovelluskehitys2024
 
             yhteys.Close();
 
-            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyja FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
-            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyja FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='1'", "tilaukset", toimitetutlista);
+            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyjä FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='0'", "tilaukset", tilauslista);
+            PaivitaDataGrid("SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote, myy.nimi as myyjä FROM tilaukset ti, asiakkaat a, tuotteet tu, myyjat myy WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id AND myy.id=ti.myyja_id AND ti.toimitettu='1'", "tilaukset", toimitetutlista);
         }
         
     }

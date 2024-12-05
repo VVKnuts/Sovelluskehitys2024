@@ -47,23 +47,23 @@
             <TabItem Header="Asiakkaat">
                 <Grid>
                     <DataGrid x:Name="asiakaslista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120"/>
-                    <Label Content="Nimi" HorizontalAlignment="Left" Margin="472,32,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Puhelin" HorizontalAlignment="Left" Margin="472,92,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="asiakasnimi" HorizontalAlignment="Left" Margin="558,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
-                    <TextBox x:Name="asiakaspuhelin" HorizontalAlignment="Left" Margin="558,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
-                    <Button Content="Lisää asiakas" HorizontalAlignment="Left" Margin="558,223,0,0" VerticalAlignment="Top" Height="30" Width="120" Click="Button_Click_3"/>
-                    <Label Content="Osoite" HorizontalAlignment="Left" Margin="471,152,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="asiakasosoite" HorizontalAlignment="Left" Margin="558,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
+                    <Label Content="Nimi" Margin="0,32,344,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35"/>
+                    <Label Content="Puhelin" HorizontalAlignment="Right" Margin="0,92,330,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="asiakasnimi" HorizontalAlignment="Right" Margin="0,36,141,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
+                    <TextBox x:Name="asiakaspuhelin" HorizontalAlignment="Right" Margin="0,96,141,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
+                    <Button Content="Lisää asiakas" HorizontalAlignment="Right" Margin="0,223,173,0" VerticalAlignment="Top" Height="30" Width="120" Click="Button_Click_3"/>
+                    <Label Content="Osoite" HorizontalAlignment="Right" Margin="0,152,336,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="asiakasosoite" HorizontalAlignment="Right" Margin="0,156,141,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Myyjät">
                 <Grid>
                     <DataGrid x:Name="myyjalista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,385,120"/>
-                    <Label Content="Nimi" HorizontalAlignment="Left" Margin="472,32,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Puhelin" HorizontalAlignment="Left" Margin="472,92,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="myyjanimi" HorizontalAlignment="Left" Margin="558,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
-                    <TextBox x:Name="myyjapuhelin" HorizontalAlignment="Left" Margin="558,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="22"/>
-                    <Button Content="Lisää myyjä" HorizontalAlignment="Left" Margin="558,223,0,0" VerticalAlignment="Top" Height="30" Width="120" Click="Button_Click_6"/>
+                    <Label Content="Nimi" Margin="0,32,344,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35"/>
+                    <Label Content="Puhelin" Margin="0,92,330,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49"/>
+                    <TextBox x:Name="myyjanimi" Margin="0,36,141,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" HorizontalAlignment="Right" Width="152"/>
+                    <TextBox x:Name="myyjapuhelin" Margin="0,96,141,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" HorizontalAlignment="Right" Width="152"/>
+                    <Button Content="Lisää myyjä" Margin="0,223,173,0" VerticalAlignment="Top" Height="30" Click="Button_Click_6" HorizontalAlignment="Right" Width="120"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tilaukset">
@@ -79,7 +79,7 @@
                             <DataGridTextColumn Header="asiakas" Binding="{Binding Path='asiakas'}" IsReadOnly="True" />
                             <DataGridTextColumn Header="tuote" Binding="{Binding Path='tuote'}" IsReadOnly="True" />
                             <DataGridTextColumn Header="määrä" Binding="{Binding Path='määrä'}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="myyjä" Binding="{Binding Path='myyja'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="myyjä" Binding="{Binding Path='myyjä'}" IsReadOnly="True" />
                             <DataGridTemplateColumn>
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>

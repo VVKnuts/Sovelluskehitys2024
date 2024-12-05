@@ -69,8 +69,9 @@
             <TabItem Header="Tilaukset">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="371*"/>
-                        <ColumnDefinition Width="423*"/>
+                        <ColumnDefinition Width="375*"/>
+                        <ColumnDefinition Width="137*"/>
+                        <ColumnDefinition Width="291*"/>
                     </Grid.ColumnDefinitions>
                     <DataGrid x:Name="tilauslista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,28,0,120" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="359" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
@@ -78,7 +79,7 @@
                             <DataGridTextColumn Header="asiakas" Binding="{Binding Path='asiakas'}" IsReadOnly="True" />
                             <DataGridTextColumn Header="tuote" Binding="{Binding Path='tuote'}" IsReadOnly="True" />
                             <DataGridTextColumn Header="määrä" Binding="{Binding Path='määrä'}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="myyjä" Binding="{Binding Path='myyjä'}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="myyjä" Binding="{Binding Path='myyja'}" IsReadOnly="True" />
                             <DataGridTemplateColumn>
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -88,13 +89,16 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Content="Asiakas" HorizontalAlignment="Left" Margin="101,32,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Label Content="Tuote" HorizontalAlignment="Left" Margin="101,92,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Button Content="Lisää tilaus" HorizontalAlignment="Left" Margin="142,262,0,0" VerticalAlignment="Top" Height="28" Width="189" Click="Button_Click_4" Grid.Column="1"/>
-                    <ComboBox x:Name="asiakaslista_cb" HorizontalAlignment="Left" Margin="211,34,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-                    <ComboBox x:Name="tuotelista_cb_2" HorizontalAlignment="Left" Margin="211,94,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-                    <Label Content="Määrä" HorizontalAlignment="Left" Margin="100,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,0.04" Grid.Column="1"/>
-                    <TextBox x:Name="tilausmaara" HorizontalAlignment="Left" Margin="211,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <Label Content="Asiakas" HorizontalAlignment="Left" Margin="101,32,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Label Content="Tuote" HorizontalAlignment="Left" Margin="101,92,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button Content="Lisää tilaus" HorizontalAlignment="Left" Margin="5,262,0,0" VerticalAlignment="Top" Height="28" Width="189" Click="Button_Click_4" Grid.Column="2"/>
+                    <ComboBox x:Name="asiakaslista_cb" HorizontalAlignment="Left" Margin="74,34,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <ComboBox x:Name="tuotelista_cb_2" HorizontalAlignment="Left" Margin="74,94,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <Label Content="Määrä" HorizontalAlignment="Left" Margin="100,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,0.04" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tilausmaara" HorizontalAlignment="Left" Margin="74,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <ComboBox x:Name="myyjalista_cb" Grid.Column="2" HorizontalAlignment="Left" Margin="74,214,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Myyjä" HorizontalAlignment="Left" Margin="100,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,0.04" Grid.Column="1" Grid.ColumnSpan="2"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Toimitetut">

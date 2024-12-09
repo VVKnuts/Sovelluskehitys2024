@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Sovelluskehitys2024"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="Tilaukset" MinHeight="500" MinWidth="800">
+        Title="Tilaukset" MinHeight="500" MinWidth="900">
 
     <Grid>
         <Menu DockPanel.Dock ="Top">

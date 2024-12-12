@@ -42,6 +42,8 @@
                     <Button Content="Poista tuote" HorizontalAlignment="Left" Margin="140,310,0,0" VerticalAlignment="Top" Height="36" Width="144" Click="Button_Click_2" Grid.Column="1"/>
                     <Button Content="Lisää varastoon" HorizontalAlignment="Left" Margin="315,310,0,0" VerticalAlignment="Top" Height="36" Width="144" Click="Button_Click_5" Grid.Column="1"/>
                     <TextBox x:Name="tuotemaara" Grid.Column="1" HorizontalAlignment="Left" Margin="315,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144"/>
+                    <ComboBox x:Name="myyjalista_cb2" Grid.Column="1" HorizontalAlignment="Left" Margin="315,54,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Grid.Column="1" Content="Tuotteen käsittelijä" HorizontalAlignment="Left" Margin="460,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.413,-0.061"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Asiakkaat">

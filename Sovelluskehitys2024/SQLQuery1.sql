@@ -1,4 +1,4 @@
-﻿CREATE TABLE tuotteet (id INTEGER IDENTITY(1,1) PRIMARY KEY, nimi VARCHAR(50), hinta INTEGER, maara INTEGER);
+﻿CREATE TABLE tuotteet (id INTEGER IDENTITY(1,1) PRIMARY KEY, nimi VARCHAR(50), hinta INTEGER, käsittelijä_id INTEGER REFERENCES myyjat, maara INTEGER);
 
 CREATE TABLE asiakkaat (id INTEGER IDENTITY(1,1) PRIMARY KEY, nimi VARCHAR(50), osoite VARCHAR(150), puhelin VARCHAR(50));
 
@@ -23,6 +23,7 @@ UPDATE tilaukset SET toimitettu=1 WHERE id=1
 SELECT ti.id as id, a.nimi as asiakas, tu.nimi as tuote FROM tilaukset ti, asiakkaat a, tuotteet tu WHERE a.id=ti.asiakas_id AND tu.id=ti.tuote_id
 
 DELETE FROM tuotteet WHERE nimi="kinkku";
+DELETE FROM tuotteet WHERE nimi="Maito";
 
 DROP TABLE tilaukset;
 DROP TABLE asiakkaat;
